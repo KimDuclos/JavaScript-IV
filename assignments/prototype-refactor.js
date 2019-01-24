@@ -31,7 +31,7 @@ Prototype Refactor
 //     }
 //   }
 
-Class GameObject {
+class GameObject {
   constructor(gameAttributes){
     this.createdAt = gameAttributes.createdAt;
     this.dimensions = gameAttributes.dimensions;
@@ -59,7 +59,7 @@ Class GameObject {
   //   }
   // }
 
-  Class CharacterStats {
+  class CharacterStats {
     constructor(charAttributes) {
       this.healthPoints = charAttributes.healthPoints;
       this.name = charAttributes.name;
@@ -79,12 +79,23 @@ Class GameObject {
     * should inherit takeDamage() from CharacterStats
   */
   
-  function Humanoid(humanoidInfo) {
-    CharacterStats.call(this, humanoidInfo);
-    this.team = humanoidInfo.team;
-    this.weapons = humanoidInfo.weapons;
-    this.language = humanoidInfo.language;
-    this.greet = () => {
+  // function Humanoid(humanoidInfo) {
+  //   CharacterStats.call(this, humanoidInfo);
+  //   this.team = humanoidInfo.team;
+  //   this.weapons = humanoidInfo.weapons;
+  //   this.language = humanoidInfo.language;
+  //   this.greet = () => {
+  //     return (`${this.name} offers a greeting in ${this.language}.`);
+  //   }
+  // }
+
+  class Humanoid {
+    constructor(humanoidAttributes) {
+      this.team = humanoidAttributes.team;
+      this.weapons = humanoidAttributes.weapons;
+      this.language = humanoidAttributes.language;
+    }
+    greet() {
       return (`${this.name} offers a greeting in ${this.language}.`);
     }
   }
