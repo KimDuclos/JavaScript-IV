@@ -59,8 +59,9 @@ class GameObject {
   //   }
   // }
 
-  class CharacterStats {
+  class CharacterStats extends GameObject {
     constructor(charAttributes) {
+      super(charAttributes); 
       this.healthPoints = charAttributes.healthPoints;
       this.name = charAttributes.name;
     }
@@ -89,8 +90,9 @@ class GameObject {
   //   }
   // }
 
-  class Humanoid {
+  class Humanoid extends CharacterStats {
     constructor(humanoidAttributes) {
+      super(humanoidAttributes);
       this.team = humanoidAttributes.team;
       this.weapons = humanoidAttributes.weapons;
       this.language = humanoidAttributes.language;
@@ -176,92 +178,92 @@ class GameObject {
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
   
-  function Hero(heroInfo) {
-    Humanoid.call(this, heroInfo);
-    this.losePoints = () => {
-      if (this.healthPoints <= 0) { // destroy character if health goes 0 or below
-        console.log("Health gone. Villain loses");
-      } else {
-        this.healthPoints--;
-        console.log(`Hero took damage. Health is now ${this.healthPoints}`);
-      }
-    }
-    this.gainPoints = () => {
-      this.healthPoints++;
-      console.log(`Hero gained health. Health is now ${this.healthPoints}`);
-    }
-  }
+  // function Hero(heroInfo) {
+  //   Humanoid.call(this, heroInfo);
+  //   this.losePoints = () => {
+  //     if (this.healthPoints <= 0) { // destroy character if health goes 0 or below
+  //       console.log("Health gone. Villain loses");
+  //     } else {
+  //       this.healthPoints--;
+  //       console.log(`Hero took damage. Health is now ${this.healthPoints}`);
+  //     }
+  //   }
+  //   this.gainPoints = () => {
+  //     this.healthPoints++;
+  //     console.log(`Hero gained health. Health is now ${this.healthPoints}`);
+  //   }
+  // }
   
   
-  function Villain(villainInfo) {
-    Humanoid.call(this, villainInfo);
-    this.losePoints = () => {
-      if (this.healthPoints <= 0) {  // destroy character if health goes 0 or below
-        console.log("Health gone. Villain loses");
-      } else {
-        this.healthPoints--;
-        console.log(`Villain took damage. Health is now ${this.healthPoints}`);
+  // function Villain(villainInfo) {
+  //   Humanoid.call(this, villainInfo);
+  //   this.losePoints = () => {
+  //     if (this.healthPoints <= 0) {  // destroy character if health goes 0 or below
+  //       console.log("Health gone. Villain loses");
+  //     } else {
+  //       this.healthPoints--;
+  //       console.log(`Villain took damage. Health is now ${this.healthPoints}`);
   
-      }
-    }
-    this.gainPoints = () => {
-      this.healthPoints++;
-      console.log(`Villain gained health. Health is now ${this.healthPoints}`);
+  //     }
+  //   }
+  //   this.gainPoints = () => {
+  //     this.healthPoints++;
+  //     console.log(`Villain gained health. Health is now ${this.healthPoints}`);
   
-    }
-  };
-  
-  
-  
-  //call constructors with values
-  const goodGuy = new Hero({
-    createdAt: new Date(),
-    dimensions: {
-      length: 4,
-      width: 3,
-      height: 2,
-    },
-    healthPoints: 5,
-    name: 'Chippy',
-    team: 'Awesome Dudes',
-    weapons: [
-      'Hammer',
-      'Stick',
-    ],
-    language: 'Elvish',
-  });
+  //   }
+  // };
   
   
-  const badGuy = new Villain({
-    createdAt: new Date(),
-    dimensions: {
-      length: 3,
-      width: 1,
-      height: 2,
-    },
-    healthPoints: 7,
-    name: 'Captain',
-    team: 'Not So Cool Dudes',
-    weapons: [
-      'Small Sword',
-      'Thorned Twig',
-    ],
-    language: 'Common Tongue',
-  });
   
-  goodGuy.gainPoints();
-  goodGuy.losePoints();
-  badGuy.gainPoints();
-  badGuy.losePoints();
-  goodGuy.gainPoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
-  badGuy.losePoints();
+  // //call constructors with values
+  // const goodGuy = new Hero({
+  //   createdAt: new Date(),
+  //   dimensions: {
+  //     length: 4,
+  //     width: 3,
+  //     height: 2,
+  //   },
+  //   healthPoints: 5,
+  //   name: 'Chippy',
+  //   team: 'Awesome Dudes',
+  //   weapons: [
+  //     'Hammer',
+  //     'Stick',
+  //   ],
+  //   language: 'Elvish',
+  // });
+  
+  
+  // const badGuy = new Villain({
+  //   createdAt: new Date(),
+  //   dimensions: {
+  //     length: 3,
+  //     width: 1,
+  //     height: 2,
+  //   },
+  //   healthPoints: 7,
+  //   name: 'Captain',
+  //   team: 'Not So Cool Dudes',
+  //   weapons: [
+  //     'Small Sword',
+  //     'Thorned Twig',
+  //   ],
+  //   language: 'Common Tongue',
+  // });
+  
+  // goodGuy.gainPoints();
+  // goodGuy.losePoints();
+  // badGuy.gainPoints();
+  // badGuy.losePoints();
+  // goodGuy.gainPoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
+  // badGuy.losePoints();
   
   
   
