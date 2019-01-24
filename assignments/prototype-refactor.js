@@ -50,11 +50,21 @@ Class GameObject {
     * should inherit destroy() from GameObject's prototype
   */
   
-  function CharacterStats(charInfo) {
-    GameObject.call(this, charInfo)
-    this.healthPoints = charInfo.healthPoints;
-    this.name = charInfo.name;
-    this.takeDamage = () => {
+  // function CharacterStats(charInfo) {
+  //   GameObject.call(this, charInfo)
+  //   this.healthPoints = charInfo.healthPoints;
+  //   this.name = charInfo.name;
+  //   this.takeDamage = () => {
+  //     return (`${this.name} took damage.`);
+  //   }
+  // }
+
+  Class CharacterStats {
+    constructor(charAttributes) {
+      this.healthPoints = charAttributes.healthPoints;
+      this.name = charAttributes.name;
+    }
+    takeDamage() {
       return (`${this.name} took damage.`);
     }
   }
