@@ -62,88 +62,58 @@ class ProjectManager extends Instructor {
 
 // Test for Person
 
-const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+const Gob = new Person({
+    name: "John", 
+    age: 25, 
+    location: "NYC",
+    gender: "M",
+    speak: "Hey yo!"
   });
 
-  const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+  const Frank = new Person({
+    name: "Mary", 
+    age: 35, 
+    location: "LA",
+    gender: "F",
+    speak: "sup"
   });
 
-  // Test for 
+  // Test for Instructor 
 
-  const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+  const Fred = new Instructor({
+    specialty: "Unix",
+    favLanguage: "JS",
+    catchPhrase: "What you talkin' 'bout Willis"
   });
 
-  const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+  const Dan = new Instructor({
+    specialty: "Front-End",
+    favLanguage: "C++",
+    catchPhrase: "Did I catch a niner in there?",
   });
 
-// Test for 
+// Test for Student
 
-const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+const Jimbo = new Student({
+    previousBackground: "Office Monkey",
+    className: "Web17",
+    faveSubjects: ["Math", "Programming", "Lunch"]
   });
 
-  const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+  const Bob = new Student({
+    previousBackground: "Cashier",
+    className: "Web18",
+    faveSubjects: ["Back-End", "Databases", "React"]
   });
 
   // Test for 
 
-  const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+  const Jen = new ProjectManager({
+    gradClassName: "Webby17",
+    favInstructor: "Professor Awesome"
   });
 
-  const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+  const Lisa = new ProjectManager({
+    gradClassName: "Webby18",
+    favInstructor: "Me"
   });
