@@ -32,12 +32,12 @@ Prototype Refactor
 //   }
 
 class GameObject {
-  constructor(gameAttributes){
-    this.createdAt = gameAttributes.createdAt;
-    this.dimensions = gameAttributes.dimensions;
+  constructor(attributes) {
+    this.createdAt = attributes.createdAt;
+    this.dimensions = attributes.dimensions;
   }
   destroy() {
-    (`${this.name} was removed from the game.`)
+    return (`${this.name} was removed from the game.`);
   }
 }
   
@@ -194,25 +194,62 @@ class GameObject {
   //   }
   // }
   
-  
-  // function Villain(villainInfo) {
-  //   Humanoid.call(this, villainInfo);
-  //   this.losePoints = () => {
-  //     if (this.healthPoints <= 0) {  // destroy character if health goes 0 or below
-  //       console.log("Health gone. Villain loses");
-  //     } else {
-  //       this.healthPoints--;
-  //       console.log(`Villain took damage. Health is now ${this.healthPoints}`);
-  
-  //     }
+  // class Hero extends Humanoid {
+  //   constructor(heroAttr){
+  //     super(heroAttr);
   //   }
-  //   this.gainPoints = () => {
+  //   losePoints() {
+  //     if (this.healthPoints <= 0) { // destroy character if health goes 0 or below
+  //             console.log("Health gone. Villain loses");
+  //           } else {
+  //             this.healthPoints--;
+  //             console.log(`Hero took damage. Health is now ${this.healthPoints}`);
+  //           }
+  //   }
+  //   gainPoints() {
+  //     this.healthPoints++;
+  //     console.log(`Hero gained health. Health is now ${this.healthPoints}`);
+  //   }
+  // }
+
+
+
+  
+  // // function Villain(villainInfo) {
+  // //   Humanoid.call(this, villainInfo);
+  // //   this.losePoints = () => {
+  // //     if (this.healthPoints <= 0) {  // destroy character if health goes 0 or below
+  // //       console.log("Health gone. Villain loses");
+  // //     } else {
+  // //       this.healthPoints--;
+  // //       console.log(`Villain took damage. Health is now ${this.healthPoints}`);
+  
+  // //     }
+  // //   }
+  // //   this.gainPoints = () => {
+  // //     this.healthPoints++;
+  // //     console.log(`Villain gained health. Health is now ${this.healthPoints}`);
+  
+  // //   }
+  // // };
+  
+  // class Villain extends Humanoid {
+  //   constructor(HumanoidAttr){
+  //     super(HumanoidAttr);
+  //   }
+  //   losePoints() {
+  //     if (this.healthPoints <= 0) {  // destroy character if health goes 0 or below
+  //         console.log("Health gone. Villain loses");
+  //         } else {
+  //             this.healthPoints--;
+  //             console.log(`Villain took damage. Health is now ${this.healthPoints}`);
+  //   }
+  //   gainPoints() {
   //     this.healthPoints++;
   //     console.log(`Villain gained health. Health is now ${this.healthPoints}`);
-  
   //   }
-  // };
-  
+
+  // }
   
   
   // //call constructors with values
