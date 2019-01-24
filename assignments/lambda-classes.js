@@ -63,19 +63,17 @@ class ProjectManager extends Instructor {
 // Test for Person
 
 const Gob = new Person({
-    name: "John", 
+    name: "Gob", 
     age: 25, 
     location: "NYC",
     gender: "M",
-    speak: "Hey yo!"
   });
 
   const Frank = new Person({
-    name: "Mary", 
+    name: "Frank", 
     age: 35, 
     location: "LA",
     gender: "F",
-    speak: "sup"
   });
 
   // Test for Instructor 
@@ -83,7 +81,7 @@ const Gob = new Person({
   const Fred = new Instructor({
     specialty: "Unix",
     favLanguage: "JS",
-    catchPhrase: "What you talkin' 'bout Willis"
+    catchPhrase: "What you talkin' 'bout Willis",
   });
 
   const Dan = new Instructor({
@@ -97,16 +95,16 @@ const Gob = new Person({
 const Jimbo = new Student({
     previousBackground: "Office Monkey",
     className: "Web17",
-    faveSubjects: ["Math", "Programming", "Lunch"]
+    faveSubjects: ["Math", "Programming", "Lunch"],
   });
 
   const Bob = new Student({
     previousBackground: "Cashier",
     className: "Web18",
-    faveSubjects: ["Back-End", "Databases", "React"]
+    faveSubjects: ["Back-End", "Databases", "React"],
   });
 
-  // Test for 
+  // Test for Project Manager
 
   const Jen = new ProjectManager({
     gradClassName: "Webby17",
@@ -117,3 +115,7 @@ const Jimbo = new Student({
     gradClassName: "Webby18",
     favInstructor: "Me"
   });
+
+
+Gob.speak();
+Frank.speak();
