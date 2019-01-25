@@ -37,11 +37,11 @@ class Student extends Person {
     listsSubjects(){
         console.log(...this.faveSubjects);
     }
-    PRAssignment(){
-        console.log(`${this.name} has submitted a PR for ${this.subject}.`);
+    PRAssignment(PRA_subject){
+        console.log(`${this.name} has submitted a PR for ${PRA_subject}.`);
     }
-    sprintChalleng(){
-        console.log(`${this.name} has begun spring challenge on ${this.subject}.`);
+    sprintChallenge(sprint_subject){
+        console.log(`${this.name} has begun spring challenge on ${sprint_subject}.`);
     }
 }
 
@@ -54,8 +54,8 @@ class ProjectManager extends Instructor {
     standup(channel){
         console.log(`${this.name} announced to ${channel}, @channel standy times!`);
     }
-    debugsCode(name){
-        console.log(`${this.name} debugs ${this.name}'s code on ${this.subject}.`)
+    debugsCode(studentObject, debugSubject){
+        console.log(`${this.name} debugs ${studentObject}'s code on ${debugSubject}.`)
     }
 }
 
@@ -137,15 +137,15 @@ Dan.grade(Frank, "QBasic");
 // Student
 Jimbo.listsSubjects();
 Jimbo.PRAssignment("Arrays");
-Jimbo.sprintChalleng("Less");
+Jimbo.sprintChallenge("Less");
 
 Bob.listsSubjects();
-Bob.PRAssignment();
-Bob.sprintChalleng();
+Bob.PRAssignment("Media Queries");
+Bob.sprintChallenge("Constructors");
 
 // Project Manager
-Jen.standup();
-Jen.debugsCode();
+Jen.standup("#general");
+Jen.debugsCode(Gob.name, "HTML");
 
-Lisa.standup();
-Lisa.debugsCode();
+Lisa.standup("#all");
+Lisa.debugsCode(Frank.name, "CSS");
